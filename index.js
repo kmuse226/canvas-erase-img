@@ -17,7 +17,7 @@ origin.src = "./hang-in-there.jpg"; // Set source path
 
 document.querySelector('#merge').addEventListener("click", () => {  
 
-  ctx.globalCompositeOperation="destination-over";
+  ctx.globalCompositeOperation="destination-over"; // New shapes are drawn behind the existing canvas content. 바탕화면 그림은 기존에 존재했던 낙서뒤에 존재한다.
   ctx.drawImage(origin,0,0);
   canvas.toBlob(function(blob) {
     let link = document.createElement('a');
@@ -30,7 +30,6 @@ document.querySelector('#merge').addEventListener("click", () => {
   })
 let coord = { x: 0, y: 0 };
 let erase = false
-
 
 document.querySelector('#erase').addEventListener("click", () => {
   erase = true
