@@ -12,7 +12,7 @@ img.addEventListener("load", function() {
   ctx.drawImage(img,0,0);
 }, false);
 
-img.src = "./example-(40).png"; // Set source path
+img.src = "./example-(41).png"; // Set source path
 origin.src = "./hang-in-there.jpg"; // Set source path
 
 document.querySelector('#merge').addEventListener("click", () => {  
@@ -24,7 +24,7 @@ document.querySelector('#merge').addEventListener("click", () => {
     link.download = 'example.png';
     link.href = URL.createObjectURL(blob);
     link.click();
-    URL.revokeObjectURL(link.href);
+    // URL.revokeObjectURL(link.href);
   }, 'image/png');
 
   })
