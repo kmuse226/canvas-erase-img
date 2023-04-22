@@ -24,7 +24,7 @@ document.querySelector('#merge').addEventListener("click", () => {
     link.download = 'example.png';
     link.href = URL.createObjectURL(blob);
     link.click();
-    // URL.revokeObjectURL(link.href);
+    URL.revokeObjectURL(link.href);
   }, 'image/png');
 
   })
@@ -40,7 +40,7 @@ document.querySelector('#init').addEventListener("click", () => {
 
 document.addEventListener("mousedown", start);
 document.addEventListener("mouseup", stop);
-window.addEventListener("resize", resize);
+// window.addEventListener("resize", resize);
 
 resize();
 
